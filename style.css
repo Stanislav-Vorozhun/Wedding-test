@@ -1,0 +1,634 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("./assets/fonts/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sverdlovsk";
+  src: url("./assets/fonts/Sverdlovsk.woff") format("woff");
+}
+
+:root {
+  --color-main: #022e22;
+  --color-background: #fcfbf8;
+  --container-width: 390px;
+}
+
+* {
+  all: unset;
+  display: revert;
+  -webkit-tap-highlight-color: transparent;
+  
+}
+
+body {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  background-color: #fcfbf8;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.locked {
+  color: #bab8b8;
+  border-color: #bbbbbb;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
+  z-index: 8;
+}
+
+.overlay.active {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-bottom: 100px;
+}
+
+/* Navigation */
+
+.hideScreen {
+  background-color: var(--color-background);
+  height: 100vh;
+  width: 100%;
+  max-width: 180px;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.hideScreen.active {
+  right: 0;
+  z-index: 9;
+}
+
+.header__nav-items {
+  margin-top: 56px;
+}
+
+nav {
+  padding: 1rem;
+  display: flex;
+}
+
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+
+.ham-menu span {
+  height: 2px;
+  width: 21px;
+  background-color: var(--color-main);
+  border-radius: 21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  z-index: 9;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 37%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 63%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 0px 18px 0;
+}
+
+.header__nav-item:not(:last-child) {
+  border-bottom: 1px solid rgba(1, 24, 65, 8%);
+}
+
+.header__item-img {
+  margin-right: 10px;
+}
+
+/* Header */
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__content-title {
+  background-image: url("assets/images/backgroundHeart.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__title-text {
+  font-family: "Sverdlovsk";
+
+  font-size: 90px;
+  text-align: center;
+  width: 342px;
+  margin-bottom: 48px;
+}
+
+.header__image {
+  max-width: var(--container-width);
+  margin-top: 30px;
+}
+
+/* Main */
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.main__content-header {
+  position: relative;
+}
+
+.main__header-text {
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+.text-date {
+  font-size: 120px;
+}
+
+.main__header-icon {
+  position: absolute;
+  width: 54px;
+  transform: rotate(15deg);
+  top: -30%;
+  right: 5%;
+}
+
+.icon-date {
+  transform: rotate(-15deg);
+  top: -14%;
+  left: 5%;
+}
+
+.main__content-body {
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+}
+
+.main__body-text {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.main__body-subtext {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Calendar */
+
+.calendar-month {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.calendar {
+  font-family: "Sverdlovsk";
+  font-size: 36px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.calendar td {
+  color: #9d9d9d;
+}
+
+.calendar th,
+.calendar td {
+  width: 14.28%;
+  height: 50px;
+  text-align: center;
+}
+
+#active-cell {
+  position: relative;
+  color: #fff;
+}
+
+.active-cell-img {
+  width: 55px;
+  position: absolute;
+  top: -14%;
+  left: 0;
+  z-index: -2;
+}
+
+.calendar__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.calendar__title-text {
+  font-size: 20px;
+}
+
+.calendar__images {
+  /* display: flex; */
+  position: relative;
+  width: 100%;
+}
+
+.calendar__images--item {
+  max-width: 211px;
+}
+
+.secondImage {
+  position: absolute;
+  border: 1px solid #fcfbf8;
+  top: 35%;
+  left: 45%;
+}
+
+/* Map */
+
+.map {
+  width: 100%;
+}
+
+.map__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.map__items-title {
+  font-size: 120px;
+}
+
+.map__items-subtitle {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.map__title-icon {
+  width: 27px;
+  transform: rotate(0deg);
+  top: 27%;
+  right: 16%;
+}
+
+.titles {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.titles__title {
+  font-family: "Sverdlovsk";
+  font-size: 120px;
+  text-align: center;
+  width: 342px;
+}
+
+.titles__title-icon {
+  width: 43px;
+  position: absolute;
+  transform: rotate(15deg);
+  top: -55%;
+  right: 7%;
+}
+
+.list__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.list__text-item {
+  font-size: 18px;
+}
+
+.images-item {
+  max-width: var(--container-width);
+  margin-top: 30px;
+}
+
+.dresscode-icon {
+  width: 33px;
+  transform: rotate(0deg);
+  top: 68%;
+  right: 49%;
+}
+
+.subtitles {
+  margin-bottom: 40px;
+}
+
+.subtitles_title {
+  font-family: "Sverdlovsk";
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subtitles_text {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.clotherColors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.clotherColors li {
+  width: 50px; /* Задаем ширину круга */
+  height: 50px; /* Задаем высоту круга */
+  border-radius: 50%; /* Делаем элемент круглым */
+}
+
+.clotherColors li:nth-child(1) {
+  background-color: #000;
+}
+.clotherColors li:nth-child(2) {
+  background-color: #47271c;
+}
+.clotherColors li:nth-child(3) {
+  background-color: #a28b83;
+}
+.clotherColors li:nth-child(4) {
+  background-color: #323c11;
+}
+.clotherColors li:nth-child(5) {
+  background-color: #7d8746;
+}
+.clotherColors li:nth-child(6) {
+  background: linear-gradient(
+    180deg,
+    hsla(45, 61%, 57%, 1) 0%,
+    hsla(51, 90%, 73%, 1) 50%,
+    hsla(45, 61%, 56%, 1) 100%
+  );
+}
+
+.postscript {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 80px;
+}
+
+.postscript span {
+  text-decoration: underline;
+}
+
+.gift-title {
+  font-size: 80px;
+}
+
+.gift-icon-left {
+  width: 26px;
+  transform: rotate(0deg);
+  top: 15%;
+  left: 8%;
+}
+
+.gift-icon-right {
+  width: 26px;
+  transform: rotate(0deg);
+  top: 15%;
+  right: 10%;
+}
+
+.smile-icon {
+  width: 16px;
+}
+
+.form-title-icon {
+  transform: rotate(-15deg);
+  top: -46%;
+  left: 12%;
+}
+
+/* Footer */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-name {
+  font-family: "Sverdlovsk";
+  font-size: 60px;
+}
+
+.contact-number {
+  font-family: "Sverdlovsk";
+  font-size: 40px;
+}
+
+.footer-icon {
+  margin-top: 40px;
+}
+
+/* form */
+
+form {
+  margin: 0px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-main);
+}
+
+.form__title {
+  text-transform: uppercase;
+}
+
+.name_box {
+  width: 100%;
+ 
+}
+
+.custom-input {
+  width: 343px;
+  height: 36px;
+  border-bottom: 2px solid;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+
+
+.menuSelection__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.menuSelection-item {
+    margin: 24px 6px 6px 0px;
+}
+
+.menuSelection-item label {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+}
+
+
+
+.menuSelection-item input:checked + label {
+  
+  background-color: var(--color-main);
+  color: var(--color-background);
+}
+
+.footnote {
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.submit_form {
+  border: 2px solid;
+    border-radius: 44px;
+    padding: 15px 80px;
+}
+
+
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none; /* Скрываем оригинальные радиокнопки */
+}
+
+.radio-buttons input[type="radio"] + label {
+  cursor: pointer;
+  padding-left: 40px; /* Добавляем отступ слева, чтобы создать внешний вид кнопки */
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.radio-buttons input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.radio-buttons input[type="radio"]:checked + label:before {
+  background-color: #000; /* Изменяем цвет круга при выборе */
+}
+
+.preference-block {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.preference-item {
+  margin-bottom: 5px;
+}
+
+.preference-item input[type="checkbox"] {
+  display: none;
+}
+
+.preference-item label {
+  display: block;
+  cursor: pointer;
+}
+
+.preference-item input[type="checkbox"]:checked + label {
+  background-color: lightblue;
+}
