@@ -16,7 +16,7 @@
 :root {
   --color-main: #022e22;
   --color-background: #fcfbf8;
-  --container-width: 390px;
+  --container-width: 375px;
 }
 
 * {
@@ -308,7 +308,7 @@ nav {
   position: absolute;
   border: 1px solid #fcfbf8;
   top: 35%;
-  left: 45%;
+  left: 43%;
 }
 
 /* Map */
@@ -446,9 +446,8 @@ nav {
   text-align: center;
   font-weight: 600;
   font-size: 18px;
-  letter-spacing: 1px;
   margin-bottom: 80px;
-  padding: 0px 5px;
+  padding: 0px 10px;
 }
 
 .postscript span {
@@ -517,7 +516,7 @@ nav {
 
 form {
   margin: 0px 16px 0px 16px;
-  padding: 0px 5px;
+  padding: 0px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,7 +533,8 @@ form {
 }
 
 .custom-input {
-  width: 343px;
+  width: 300px;
+  
   height: 36px;
   border-bottom: 2px solid;
   font-size: 14px;
