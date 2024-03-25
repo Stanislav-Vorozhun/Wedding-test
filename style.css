@@ -27,12 +27,10 @@
 }
 
 body {
-  display: flex;
+  width: 375px;
   font-family: "Inter", sans-serif;
   background-color: #fcfbf8;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 
@@ -534,7 +532,7 @@ form {
 
 .custom-input {
   width: 300px;
-  
+
   height: 36px;
   border-bottom: 2px solid;
   font-size: 14px;
