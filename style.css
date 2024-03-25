@@ -409,7 +409,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px;
 }
 
 .clotherColors li {
@@ -448,6 +448,7 @@ nav {
   font-size: 18px;
   letter-spacing: 1px;
   margin-bottom: 80px;
+  padding: 0px 5px;
 }
 
 .postscript span {
@@ -515,7 +516,8 @@ nav {
 /* form */
 
 form {
-  margin: 0px 20px 0px 20px;
+  margin: 0px 16px 0px 16px;
+  padding: 0px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
