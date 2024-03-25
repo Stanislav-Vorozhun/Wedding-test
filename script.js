@@ -163,7 +163,6 @@ submitButton.addEventListener("click", event => {
     sleepover: getSelectedRadioButtonValue(sleepoverRadioButtons)
   };
 
-  // emailjs.send('service_e53111k','template_3am7z2s',formData).then(alert('Отправлено!'));
-  console.log(formData);
+  emailjs.send('service_e53111k','template_3am7z2s',formData).then(alert('Отправлено!'));
   event.target.form.reset();
 });
