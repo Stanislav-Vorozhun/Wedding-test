@@ -1,0 +1,610 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("./assets/fonts/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sverdlovsk";
+  src: url("./assets/fonts/Sverdlovsk.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 6.15rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sverdlovsk";
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+span {
+  font-family: "Inter", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 8rem 0 2rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 968px;
+}
+
+.content {
+  align-items: center;
+  grid-template-columns: 50% 40%;
+  column-gap: 2rem;
+  padding-top: 5.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #ffffff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+
+.nav__list {
+  column-gap: 2rem;
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #002906;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: #ff03a8;
+}
+
+.nav__icon {
+  display: none;
+}
+
+/* HOME */
+
+.home__container {
+  row-gap: 10rem;
+}
+
+.home__content {
+  align-items: center;
+  /* column-gap: 2rem; */
+  grid-template-columns: 50% 40%;
+  padding-top: 5.5rem;
+}
+
+.home__image {
+  display: flex;
+  width: 363px;
+  height: 385px;
+  border: 3px solid #ff03a8;
+  background: url(assets/images/people.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__title {
+  position: relative;
+}
+
+.home__title img {
+  position: absolute;
+  width: 60px;
+}
+
+.home__title .first-icon {
+  top: -5rem;
+  left: -3rem;
+  rotate: -32deg;
+}
+
+.home__title .second-icon {
+  rotate: 30deg;
+  top: -3rem;
+  right: 6rem;
+}
+
+.home__title .third-icon {
+  rotate: -7deg;
+  top: 15rem;
+  left: 8rem;
+}
+
+.home__subtitle {
+  display: block;
+  text-align: center;
+  font-size: 0.96rem;
+}
+
+.recourse {
+  grid-template-columns: 50% 50%;
+  font-size: 3.3rem;
+}
+
+.recourse h1 {
+  font-size: 3.15rem;
+  margin-bottom: 5rem;
+}
+
+.recourse .first-icon {
+  top: -5rem;
+  left: 18rem;
+  rotate: -14deg;
+}
+
+.recourse .home__image {
+  background: url(assets/images/handsAndFlowers.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* DATE */
+
+.date__content {
+  align-items: center;
+  grid-template-columns: 50% 40%;
+  padding-top: 5.5rem;
+}
+
+.date__data {
+  font-family: "Sverdlovsk", sans-serif;
+  font-weight: 500;
+}
+
+.date__images {
+  position: relative;
+}
+
+.date__images img {
+  width: 250px;
+}
+
+.date__second-image {
+  position: absolute;
+  border: 2px solid #fff;
+  top: 7rem;
+  right: 4rem;
+}
+
+.date__title {
+  position: relative;
+  text-align: center;
+}
+
+.date__title img {
+  position: absolute;
+  top: -4rem;
+  right: 16rem;
+  rotate: 15deg;
+  width: 50px;
+}
+
+.date__calendar-title {
+  text-align: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 2rem;
+}
+
+.calendar__days,
+.calendar__numbers {
+  display: contents;
+}
+
+.calendar__day,
+.calendar__number {
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.calendar__number {
+  color: #9d9d9d;
+}
+
+.with-heart {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.with-heart img {
+  position: absolute;
+  top: -30%;
+  right: -1%;
+  z-index: -1;
+}
+
+/* PLACE */
+.place {
+  padding: 15rem 0 10rem;
+}
+
+.place__content {
+  align-items: center;
+  grid-template-columns: 50% 40%;
+  padding-top: 5.5rem;
+}
+
+.place__data {
+  position: relative;
+}
+
+.place__image {
+  width: 450px;
+  height: 250px;
+  background: url(assets/images/map.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #ff03a8;
+}
+
+.place__title img {
+  position: absolute;
+  top: -3rem;
+  right: 13rem;
+  rotate: -23deg;
+  z-index: -1;
+}
+
+/* TIME */
+
+.time__content {
+  grid-template-columns: 50% 40%;
+}
+
+.time__image {
+  background: url(assets/images/flowers.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 363px;
+  height: 385px;
+  border: 3px solid #ff03a8;
+}
+
+.time__data {
+  position: relative;
+}
+
+.time__title img {
+  position: absolute;
+  width: 50px;
+  top: -4rem;
+  right: 8rem;
+  rotate: 15deg;
+}
+
+.time__schedule {
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.time__schedule-item {
+  padding: 0.3rem 0;
+}
+
+/* DRESSCODE */
+
+.dresscode__content {
+  position: relative;
+  grid-template-columns: 50% 40%;
+}
+
+.dresscode__title img {
+  position: absolute;
+  top: 13rem;
+  right: 47rem;
+  width: 108px;
+  rotate: -25deg;
+  z-index: -1;
+}
+
+.dresscode__data {
+  text-align: center;
+}
+
+.dresscode__subtitle {
+  margin-top: 3rem;
+}
+
+.dresscode__subtitle-text {
+  display: block;
+  margin: 1rem 0;
+}
+
+.dresscode__colors {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0 1rem 0;
+}
+
+.dresscode__colors li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dresscode__colors li:nth-child(1) {
+  background-color: #000;
+}
+.dresscode__colors li:nth-child(2) {
+  background-color: #47271c;
+}
+.dresscode__colors li:nth-child(3) {
+  background-color: #a28b83;
+}
+.dresscode__colors li:nth-child(4) {
+  background-color: #323c11;
+}
+.dresscode__colors li:nth-child(5) {
+  background-color: #7d8746;
+}
+.dresscode__colors li:nth-child(6) {
+  background: linear-gradient(
+    180deg,
+    hsla(45, 61%, 57%, 1) 0%,
+    hsla(51, 90%, 73%, 1) 50%,
+    hsla(45, 61%, 56%, 1) 100%
+  );
+}
+
+/* GIFT */
+
+.gift__data {
+  position: relative;
+}
+.gift__title img {
+  position: absolute;
+}
+.gift__title img:nth-child(1) {
+  width: 56px;
+  top: -4rem;
+  rotate: -25deg;
+}
+
+.gift__title img:nth-child(2) {
+  width: 95px;
+  top: 2rem;
+  right: 0rem;
+  z-index: -1;
+  rotate: 15deg;
+}
+
+.gift__image {
+  background: url(assets/images/hands.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 363px;
+  height: 385px;
+  border: 3px solid #ff03a8;
+}
+
+/*ANKETA */
+
+/* FORM */
+
+form {
+  margin: 0px 16px 0px 16px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #022e22;
+}
+
+.form__title {
+  text-transform: uppercase;
+}
+
+.name_box {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.custom-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+.menuSelection__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menuSelection {
+  margin-bottom: 2rem;
+}
+
+.menuSelection-item {
+  margin: 24px 6px 6px 0px;
+}
+
+.menuSelection-item input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+
+.menuSelection-item label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+}
+
+.menuSelection-item input:checked + label {
+  background-color: #022e22;
+  color: #fff;
+}
+
+.footnote {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.submit_form {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 44px;
+  padding: 1rem 3rem;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none; /* Скрываем оригинальные радиокнопки */
+}
+
+.radio-buttons input[type="radio"] + label {
+  cursor: pointer;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.radio-buttons input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #022e22;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.radio-buttons input[type="radio"]:checked + label:before {
+  background-color: #022e22; /* Изменяем цвет круга при выборе */
+}
+
+.preference-block {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.preference-item {
+  margin-bottom: 5px;
+}
+
+.preference-item input[type="checkbox"] {
+  display: none;
+}
+
+.preference-item label {
+  display: block;
+  cursor: pointer;
+}
+
+.preference-item input[type="checkbox"]:checked + label {
+  background-color: lightblue;
+}
+
+/* CONTACTS */
+
+.contacts__content {
+  column-gap: 8rem;
+}
+
+.contact-name {
+  font-size: 4rem;
+}
+
+.contact-number {
+  font-family: "Sverdlovsk";
+  font-size: 3rem;
+}
+
+.contacts-postscript {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.contacts__text {
+  position: relative;
+}
+
+.contacts__text img {
+  position: absolute;
+  top: -8rem;
+  left: 9rem;
+  rotate: 15deg;
+}

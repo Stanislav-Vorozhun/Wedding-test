@@ -122,7 +122,7 @@ handleCheckboxGroup(noFoodCheckbox, otherFoodCheckboxes);
 handleCheckboxGroup(noAlcoholCheckbox, otherAlcoholCheckboxes);
 
 
-// const allergicRadioButtons = document.querySelectorAll('input[name="allergic"]');
+
 const allergyInput = document.getElementById("allergyInput");
 
 // Функция для отображения или скрытия поля ввода в зависимости от выбранной радиокнопки
@@ -134,7 +134,7 @@ function toggleAllergyInput() {
     }
 }
 
-// Добавляем обработчик события change для каждой радиокнопки
+
 allergicRadioButtons.forEach(radioButton => {
     radioButton.addEventListener("change", toggleAllergyInput);
 });
@@ -151,6 +151,18 @@ submitButton.addEventListener("click", event => {
   } else {
     senderName.style.color = "";
   }
+
+  const hasAllergy = getSelectedRadioButtonValue(allergicRadioButtons) === "Да";
+  if (hasAllergy && !allergicText.value.trim()) {
+    allergicText.style.color = "red";
+    allergicText.focus();
+    allergicText.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  } else {
+    allergicText.style.color = "";
+  }
+
+
 
 
   const formData = {
