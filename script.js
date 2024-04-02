@@ -248,21 +248,35 @@ submitButton.addEventListener("click", (event) => {
   if (!validateSleepover()) {
     event.preventDefault(); // Отменяем отправку формы, если поле не прошло валидацию
   }
+  else {
+
+    const formData = {
+      name: senderName.value,
+      attendance: getSelectedRadioButtonValue(attendanceRadioButtons),
+      allergic: getSelectedRadioButtonValue(allergicRadioButtons),
+      wichAllergiс: allergicText.value,
+      foodPreferences: getSelectedValues(foodCheckboxes),
+      alcoholPreferences: getSelectedValues(alcoholCheckboxes),
+      sleepover: getSelectedRadioButtonValue(sleepoverRadioButtons),
+    };
+  
+    emailjs.send('service_e53111k','template_3am7z2s',formData).then(alert('Отправлено!'));
+    event.target.form.reset();
+
+  }
 
   
 
-  const formData = {
-    name: senderName.value,
-    attendance: getSelectedRadioButtonValue(attendanceRadioButtons),
-    allergic: getSelectedRadioButtonValue(allergicRadioButtons),
-    wichAllergiс: allergicText.value,
-    foodPreferences: getSelectedValues(foodCheckboxes),
-    alcoholPreferences: getSelectedValues(alcoholCheckboxes),
-    sleepover: getSelectedRadioButtonValue(sleepoverRadioButtons),
-  };
+  // const formData = {
+  //   name: senderName.value,
+  //   attendance: getSelectedRadioButtonValue(attendanceRadioButtons),
+  //   allergic: getSelectedRadioButtonValue(allergicRadioButtons),
+  //   wichAllergiс: allergicText.value,
+  //   foodPreferences: getSelectedValues(foodCheckboxes),
+  //   alcoholPreferences: getSelectedValues(alcoholCheckboxes),
+  //   sleepover: getSelectedRadioButtonValue(sleepoverRadioButtons),
+  // };
 
-  // emailjs.send('service_e53111k','template_3am7z2s',formData).then(alert('Отправлено!'));
-  console.log(formData);
-  alert("отправлено!!!");
-  event.target.form.reset();
+  // // emailjs.send('service_e53111k','template_3am7z2s',formData).then(alert('Отправлено!'));
+  // event.target.form.reset();
 });
