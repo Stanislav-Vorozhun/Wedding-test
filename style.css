@@ -187,7 +187,7 @@ nav {
 }
 
 .header__image {
-  max-width: var(--container-width);
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -306,13 +306,14 @@ nav {
 
 .calendar__images--item {
   max-width: 211px;
+  
 }
 
 .secondImage {
   position: absolute;
   border: 1px solid #fcfbf8;
   top: 35%;
-  left: 43%;
+  left: 39%;
 }
 
 /* Map */
@@ -382,7 +383,7 @@ nav {
 }
 
 .images-item {
-  max-width: var(--container-width);
+  width: 100%;
   margin-top: 30px;
 }
 
