@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav__link");
   const preloader = document.getElementById("preloader");
 
-  preloader.style.display = "block";
+  preloader.style.display = "flex";
   window.onload = function () {
     preloader.style.display = "none";
   };
