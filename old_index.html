@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "nAHzrsaIUmKff32qn",
+        });
+      })();
+    </script>
+
+    <title>My wedding</title>
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav hideScreen">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/calendar.svg"
+                alt="calendar"
+              />
+              <a href="#date" class="header__item-text">Дата</a>
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/marker.svg"
+                alt="place"
+              />
+              <a href="#place" class="header__item-text">Место</a>
+              
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/time-oclock.svg"
+                alt="time"
+              />
+              <a href="#time" class="header__item-text">Время</a>
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/dresscode.svg"
+                alt="dresscode"
+              />
+              <a href="#dresscode" class="header__item-text">Дресс-код</a>
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/gift.svg"
+                alt="gift"
+              />
+              <a href="#gift" class="header__item-text">Что подарить?</a>
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/test.svg"
+                alt="test"
+              />
+              <a href="#anketa" class="header__item-text">Анкета</a>
+            </li>
+            <li class="header__nav-item">
+              <img
+                class="header__item-img"
+                src="assets/icons/call.svg"
+                alt="contact"
+              />
+              <a href="#contacts" class="header__item-text">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="header__nav">
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <div class="header__content">
+          <div class="header__content-title">
+            <h2 class="header__title-text">дарья <br />и владислав</h2>
+          </div>
+          <img
+            src="assets/images/people.jpg"
+            alt="people"
+            class="header__image"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__content">
+          <div class="main__content-header">
+            <h2 class="header__title-text main__header-text">
+              дорогие <br />
+              родные и друзья !
+            </h2>
+            <img
+              class="main__header-icon"
+              src="assets/icons/heart.svg"
+              alt="heart"
+            />
+          </div>
+          <div class="main__content-body">
+            <p class="main__body-text">
+              Мы рады сообщить вам, что совсем скоро состоится самое главное
+              торжество в нашей жизни - день нашей свадьбы!
+            </p>
+            <p class="main__body-subtext">
+              Приглашаем вас разделить с нами радость этого незабываемого дня.
+            </p>
+          </div>
+        </div>
+        <img
+          class="header__image"
+          src="assets/images/handsAndFlowers.jpg"
+          alt="handsAndFlowers"
+        />
+      </div>
+      <div class="container" id="date">
+        <div class="main__content date-content">
+          <div class="main__content-header">
+            <h2 class="header__title-text text-date">дата</h2>
+            <img
+              class="main__header-icon icon-date"
+              src="assets/icons/heart.svg"
+              alt="heart"
+            />
+          </div>
+          <p class="header__title-text calendar-month">май</p>
+          <table class="calendar">
+            <thead>
+              <tr>
+                <th>пн</th>
+                <th>вт</th>
+                <th>ср</th>
+                <th>чт</th>
+                <th>пт</th>
+                <th>сб</th>
+                <th>св</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>29</td>
+              <td>30</td>
+              <td>1</td>
+              <td id="active-cell">
+                <img
+                  class="active-cell-img"
+                  src="assets/icons/miniHeart.svg"
+                  alt="heart"
+                />
+                2
+              </td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tbody>
+          </table>
+          <div class="calendar__title">
+            <p class="calendar__title-text">2 мая 2024 года</p>
+            <p class="calendar__title-text">15:00</p>
+          </div>
+          <div class="calendar__images">
+            <img
+              class="calendar__images--item"
+              src="assets/images/rings.jpg"
+              alt="rings"
+            />
+            <img
+              class="calendar__images--item secondImage"
+              src="assets/images/table.jpg"
+              alt="table"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container" id="place">
+        <div class="map__items">
+          <div class="wrapper">
+            <h2 class="header__title-text map__items-title">место</h2>
+            
+          </div>
+          <p class="header__title-text map__items-subtitle">усадьба голд</p>
+          <p>Адрес: д.Волковичи, Поселковая ул., 15Б</p>
+          <a
+            href="https://yandex.by/maps/29630/minsk-district/house/Zk4YdQ5lSUUCQFtpfXRwc35rbQ==/?ll=27.395373%2C53.812279&source=constructorStatic&um=constructor%3A732315d25feaa1f26fc64676f58caaa543c1911b6768283f441bc2aa4d7d20cc&z=16.99"
+            target="_blank"
+            ><img
+              class="map"
+              src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A732315d25feaa1f26fc64676f58caaa543c1911b6768283f441bc2aa4d7d20cc&amp;width=500&amp;height=240&amp;lang=ru_RU"
+              alt=""
+              style="border: 0"
+          /></a>
+          <a
+            href="https://yandex.by/maps/29630/minsk-district/house/Zk4YdQ5lSUUCQFtpfXRwc35rbQ==/?ll=27.395373%2C53.812279&source=constructorStatic&um=constructor%3A732315d25feaa1f26fc64676f58caaa543c1911b6768283f441bc2aa4d7d20cc&z=16.99"
+            target="_blank"
+            >Смотреть карту</a
+          >
+        </div>
+      </div>
+      <div class="container" id="time">
+        <div class="titles">
+          <h2 class="titles__title">Время</h2>
+          <img class="titles__title-icon" src="assets/icons/heart.svg" alt="" />
+        </div>
+
+        <ul class="list__text">
+          <li class="list__text-item">15:00 - Сбор гостей/Фуршет</li>
+          <li class="list__text-item">15:30 - Церемония бракосочетания</li>
+          <li class="list__text-item">17:00 - Начало банкета</li>
+        </ul>
+
+        <div class="images">
+          <img
+            class="images-item"
+            src="assets/images/flowers.jpg"
+            alt="flowers"
+          />
+        </div>
+      </div>
+      <div class="container" id="dresscode">
+        <div class="titles">
+          <h2 class="titles__title">Дресс-код</h2>
+          
+        </div>
+        <div class="subtitles">
+          <p class="subtitles_title">девушки</p>
+          <p class="subtitles_text">
+            Мы будем очень благодарны, если вы поддержите стиль и цвет нашей
+            свадьбы в своих нарядах.
+          </p>
+        </div>
+        <ul class="clotherColors">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p class="postscript">
+          P.S. Просим <span>воздержаться</span> от белого цвета.
+        </p>
+        <div class="subtitles">
+          <p class="subtitles_title">Мужчины</p>
+          <p class="subtitles_text">Костюм, белая рубашка.</p>
+        </div>
+      </div>
+      <div class="container" id="gift">
+        <div class="titles">
+          <h2 class="titles__title gift-title">что нам подарить?</h2>
+          <img
+            class="titles__title-icon gift-icon-left"
+            src="assets/icons/heart.svg"
+            alt="heart"
+          />
+          <img
+            class="titles__title-icon gift-icon-right"
+            src="assets/icons/heart.svg"
+            alt="heart"
+          />
+        </div>
+        <div class="subtitles">
+          <p class="subtitles_text">
+            Свои тёплые слова и пожелания приносите в сердцах, а подарки - в
+            конверте
+            <img class="smile-icon" src="assets/icons/emoji.png" alt="emoji" />
+          </p>
+          <p class="subtitles_text">
+            Мы будем рады, если вместо цветов вы подарите нам лотерейный
+            билетик.
+          </p>
+        </div>
+        <div class="module__images">
+          <img src="assets/images/hands.jpg" alt="hands" class="images-item" />
+        </div>
+      </div>
+      <div class="container" id="anketa">
+        <div class="titles">
+          <h2 class="titles__title">Анкета</h2>
+          <img
+            class="titles__title-icon form-title-icon"
+            src="assets/icons/heart.svg"
+            alt="heart"
+          />
+        </div>
+        <div class="subtitles">
+          <p class="subtitles_text">
+            Просим дать ответ до 15 апреля 2024 года. Спасибо!
+          </p>
+        </div>
+        <!--  -->
+        <form>
+          <div class="name_box">
+            <label for="name">ИМЯ И ФАМИЛИЯ</label><br />
+            <input
+              id="name"
+              class="custom-input"
+              placeholder="Введите Имя и Фамилию"
+              type="text"
+            />
+          </div>
+
+          <div class="radio-buttons">
+            <label id="isAttendance" for="isAttendance">ОТМЕТИТЬ ПРИСУТСТВИЕ</label><br />
+            <input type="radio" id="attend" name="attendance" value="Да" />
+            <label for="attend">Приду</label>
+            <input type="radio" id="not_attend" name="attendance" value="Нет" />
+            <label for="not_attend">К сожалению, не смогу прийти</label>
+          </div>
+
+          <div id="menuSelectionFood" class="menuSelection">
+            <label class="form__title" for="menu_selection"
+              >Предпочтения по Еде</label
+            ><br />
+            <div class="menuSelection__wrapper">
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="noMeat"
+                  name="noMeat"
+                  value="Без мяса"
+                />
+                <label for="noMeat">Не ем мясо</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="noFish"
+                  name="noFish"
+                  value="Без рыбы"
+                />
+                <label for="noFish">Не ем рыбу</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="vegetarian"
+                  name="vegetarian"
+                  value="Вегетарианец"
+                />
+                <label for="vegetarian">Вегетарианец</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="nothing"
+                  name="nothing"
+                  value="Нету"
+                />
+                <label for="nothing">нет</label>
+              </div>
+
+              <label class="footnote" for="menu_selection"
+                >*Можно выбрать несколько вариантов</label
+              ><br />
+            </div>
+          </div>
+
+          <div class="radio-buttons">
+            <label for="isAllergic">Имеется ли аллергия на какой-либо продукт?</label
+            ><br />
+            <input type="radio" id="not_allergic" name="allergic" value="Нет" />
+            <label for="not_allergic">нет</label>
+            <input type="radio" id="allergic" name="allergic" value="Да" />
+            <label for="allergic">да</label>
+            <div id="allergyInput" style="display: none">
+              <input
+                class="custom-input"
+                type="text"
+                id="allergyText"
+                placeholder="Укажите продукт, на который есть аллергия"
+              />
+            </div>
+          </div>
+
+          <div id="menuSelectionAlcohol" class="menuSelection">
+            <label for="menu_selection">Предпочтения по алкоголю</label><br />
+            <div class="menuSelection__wrapper">
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="champagne"
+                  name="champagne"
+                  value="Шапанское"
+                />
+                <label for="champagne">Шампанское</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="red_wine"
+                  name="red_wine"
+                  value="Красное вино"
+                />
+                <label for="red_wine">Красное вино</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="white_wine"
+                  name="white_wine"
+                  value="Белое вино"
+                />
+                <label for="white_wine">Белое вино</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="whiskey"
+                  name="whiskey"
+                  value="Коньяк/виски"
+                />
+                <label for="whiskey">Коньяк/виски</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input type="checkbox" id="vodka" name="vodka" value="Водка" />
+                <label for="vodka">Водка</label>
+              </div>
+
+              <div class="menuSelection-item">
+                <input
+                  type="checkbox"
+                  id="without_alcohol"
+                  name="without_alcohol"
+                  value="Без алкоголя"
+                />
+                <label for="without_alcohol">Не буду пить</label>
+              </div>
+
+              <label class="footnote" for="menu_selection"
+                >*Можно выбрать несколько вариантов</label
+              ><br />
+            </div>
+          </div>
+
+          <div class="radio-buttons">
+            <label for="sleepover"
+              >Планируете ли остаться на ночь после мероприятия?</label
+            ><br />
+            <input
+              type="radio"
+              id="sleepover"
+              name="sleepover"
+              value="с ночевкой"
+            />
+            <label for="sleepover">да</label>
+            <input
+              type="radio"
+              id="not_sleepover"
+              name="sleepover"
+              value="Без ночевки"
+            />
+            <label for="not_sleepover">нет</label>
+          </div>
+
+          <button class="submit_form" type="submit">Отправить</button>
+        </form>
+        <!--  -->
+      </div>
+    </main>
+    <footer>
+      <div class="container" id="contacts">
+        <div class="subtitles">
+          <p class="subtitles_text">
+            В день свадьбы и до, по всем вопросам, вы можете обращаться к нашим
+            свадебным организаторам:
+          </p>
+        </div>
+        <div class="contacts">
+          <div class="contact__box">
+            <p class="contact-name">алеся</p>
+            <a class="contact-number" href="tel:+375 29 684 51 20">+375 29 684 51 20</a>
+          </div>
+          <div class="contact__box">
+            <p class="contact-name">анна</p>
+            <a class="contact-number" href="tel:+375 29 772 48 33">+375 29 772 48 33</a>
+          </div>
+        </div>
+        <div class="titles">
+          <h2 class="titles__title gift-title">ждём вас!</h2>
+          <img class="footer-icon" src="assets/icons/heart.svg" alt="heart" />
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
