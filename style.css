@@ -576,6 +576,7 @@ form {
 }
 
 .submit_form {
+  font-size: 1rem;
   background-color: transparent;
   border: 1px solid;
   border-radius: 44px;
