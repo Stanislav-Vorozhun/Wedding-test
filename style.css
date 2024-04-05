@@ -577,17 +577,17 @@ form {
 
 .submit_form {
   font-size: 1rem;
-  background-color: #fff;
+  background-color: #022e22;
+  color: #fff;
   border: 1px solid;
   border-radius: 44px;
   padding: 1rem 3rem;
 }
 
-.submit_form:hover {
-  background-color: #022e22;
-  color: #fff;
+/* .submit_form:hover {
   
-}
+  
+} */
 
 .radio-buttons {
   display: flex;
