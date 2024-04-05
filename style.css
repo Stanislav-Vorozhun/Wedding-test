@@ -339,6 +339,8 @@ span {
 }
 
 .place__image--link {
+  background-color: #034938;
+  color: #fff;
   border: 1px solid;
   margin-left: 6.6rem;
   padding: 0.7rem;
@@ -349,10 +351,10 @@ span {
   width: 60%;
 }
 
-.place__image--link:hover {
+/* .place__image--link:hover {
   background-color: #034938;
   color: #fff;
-}
+} */
 
 .place__title img {
   position: absolute;
